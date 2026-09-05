@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LYRICS HUB - Search Song Lyrics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>🎵 LYRICS HUB</h1>
+                <p class="tagline">Search and discover song lyrics instantly</p>
+            </div>
+        </header>
+
+        <main>
+            <section class="search-section">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search by song title or artist..."
+                        class="search-input"
+                    >
+                    <button id="searchBtn" class="search-btn">🔍 Search</button>
+                </div>
+                <div class="search-tips">
+                    <small>💡 Tip: Search for "Song Title - Artist" for better results</small>
+                </div>
+            </section>
+
+            <section id="resultsSection" class="results-section" style="display: none;">
+                <div id="songResults" class="song-results"></div>
+            </section>
+
+            <section id="lyricsSection" class="lyrics-section" style="display: none;">
+                <button id="backBtn" class="back-btn">← Back to Results</button>
+                <div class="lyrics-container">
+                    <div id="lyricsContent" class="lyrics-content"></div>
+                </div>
+            </section>
+
+            <section id="loadingSection" class="loading-section" style="display: none;">
+                <div class="loader"></div>
+                <p>Searching for lyrics...</p>
+            </section>
+
+            <section id="errorSection" class="error-section" style="display: none;">
+                <div id="errorMessage" class="error-message"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>LYRICS HUB © 2026 | Music lyrics at your fingertips</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
