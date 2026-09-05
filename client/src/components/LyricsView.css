@@ -1,0 +1,111 @@
+.lyrics-view-container {
+  animation: fadeIn 0.4s ease;
+}
+
+.lyrics-display {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.song-header {
+  border-bottom: 3px solid var(--primary);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.song-header h1 {
+  color: var(--primary);
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.artist-name {
+  color: var(--secondary);
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.album-name {
+  color: #666;
+  font-size: 0.95em;
+  margin-top: 5px;
+}
+
+.lyrics-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.copy-btn,
+.share-btn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(139, 92, 246, 0.2);
+}
+
+.copy-btn:hover,
+.share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+
+.lyrics-content {
+  line-height: 1.8;
+  font-size: 1.05em;
+  color: var(--dark);
+  background: var(--light);
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 4px solid var(--primary);
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.lyrics-line {
+  margin-bottom: 12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .lyrics-display {
+    padding: 20px;
+  }
+
+  .song-header h1 {
+    font-size: 1.8em;
+  }
+
+  .lyrics-actions {
+    flex-direction: column;
+  }
+
+  .copy-btn,
+  .share-btn {
+    width: 100%;
+  }
+
+  .lyrics-content {
+    padding: 15px;
+    font-size: 0.95em;
+  }
+}
